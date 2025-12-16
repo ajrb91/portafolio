@@ -41,7 +41,7 @@ This portfolio includes **enterprise and academic RPA projects** developed using
 
 The **complete and detailed inventory** of RPA projects — including project names, platforms and roles (Developer, Analyst, Architect, Operator, Tutor) — is documented in the following file:
 
-➡️ **See:** `README_rpa.md`  
+➡️ **See:** `README.md`  
 *(RPA & Automation Projects Inventory)*
 
 Projects include:
