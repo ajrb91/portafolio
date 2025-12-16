@@ -8,7 +8,7 @@ Client names and sensitive information have been intentionally omitted for confi
 
 ## UiPath Projects
 
-- SIM Card Change Process (Enterprise)  
+- SIM Card Change Process
   *Roles:* Developer, Support
 
 - Unlocking Inconsistency Handling Process  
@@ -97,5 +97,7 @@ Client names and sensitive information have been intentionally omitted for confi
 - CRM Systems
 - AWS S3
 - Legacy Applications
+- PDF
+- IQBot
 
 ---
