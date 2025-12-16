@@ -1,9 +1,10 @@
 # 🚀 Amílcar Rodríguez – Automation & Data Engineer  
-### RPA · Data Engineering · Machine Learning · Process Automation · Solutions integrator
+### RPA · Data Engineering · Machine Learning · Process Automation · Solutions Integrator
 
 Welcome to my professional portfolio.  
-Here you will find a curated selection of **automation**, **machine learning**, and **data engineering** projects built with real-world quality standards.  
-My work blends **RPA expertise**, **data modeling**, and **clean engineering practices** to deliver scalable and production-ready solutions.
+Here you will find a curated selection of **automation**, **machine learning**, and **data engineering** projects built with real-world quality standards.
+
+My work combines **RPA developing and architecture**, **data engineering**, and **clean engineering practices** to deliver scalable, production-ready solutions.
 
 ---
 
@@ -20,55 +21,63 @@ Regression models (Lasso, ElasticNet), outlier detection, socio-economic analysi
 Classification models with 99–100% accuracy. Feature importance, business rules, dataset restructuring, model validation.
 
 ### ▸ **House Price Prediction**  
-Lasso regression on the Ames dataset. RMSE ≈ 21k (~5.8% error). Strong performance visualization and feature impact.
+Lasso regression on the Ames dataset. RMSE ≈ 21k (~5.8% error). Performance visualization and feature impact analysis.
 
 ### ▸ **MOP Investment Analysis**  
 Public infrastructure dataset profiling and investment behavior modeling.
 
 ### ▸ **Marketing Leads Automation – Business Intelligence**  
-A BI-oriented solution combining:
-- Structured data intake (Google Forms)  
-- Sentiment analysis (Python + ChatGPT API)  
-- Automated business rules (Apps Script)  
-- Real-time dashboards (Looker Studio)  
-A complete data-processing + analytics + automation workflow.
+End-to-end solution combining:
+- Structured data intake (Google Forms)
+- Sentiment analysis (Python + ChatGPT API)
+- Automated business rules (Apps Script)
+- Real-time dashboards (Looker Studio)
 
 ---
 
 ## 🤖 RPA & Automation Projects
 
-Enterprise-grade bots following best practices, modularity, and robust error handling.
+This portfolio includes **enterprise and academic RPA projects** developed using **UiPath, Automation Anywhere and Blue Prism**, covering end-to-end automation lifecycles.
 
-- **AA RPA Challenge (Best Practice Version)** – Config-driven bot, XML settings, utilities, master orchestrator  
-- **UiPath RPA Challenge (REFramework)** – Full REFramework (Init → Process → End), exceptions, transactions  
-- **A360 Fast Training – 9 Hours** – Practical automations (Excel, UI, PDFs, emails)  
-- **AA Developer Training – 30 Hours** – Advanced commands, utilities, control room, bot lifecycle  
-- **UiPath Developer Training – 40 Hours** – Selectors, debugging, project organization, REFramework fundamentals  
+The **complete and detailed inventory** of RPA projects — including project names, platforms and roles (Developer, Analyst, Architect, Operator, Tutor) — is documented in the following file:
+
+➡️ **See:** `README_rpa.md`  
+*(RPA & Automation Projects Inventory)*
+
+Projects include:
+- Enterprise operational automations
+- Banking and financial processes
+- CMS data extraction and loading workflows
+- RPA challenges and best-practice frameworks
+- COE, health check and governance initiatives
+- Training and laboratory practice modules
 
 ---
 
 ## 🧰 Core Skills & Tools
 
-**RPA:** Automation Anywhere A360 · UiPath (REFramework) · Power Automate · Blue Prism
-**Data:** Python · Pandas · NumPy · Scikit-Learn · Jupyter · Coolab
-**Engineering:** ETL · AWS S3 · Git · SQL · APIs  
-**Other:** Excel automation · PDF parsing · Email automation · Process design
+**RPA:**  
+Automation Anywhere A360 · UiPath · Blue Prism · Power Automate
+
+**Data & Engineering:**  
+Python · Pandas · NumPy · Scikit-Learn · SQL · ETL · AWS S3 · APIs · Git
+
+**Automation Targets:**  
+SAP · Oracle EBS · Web Applications · Excel · PDFs · Email Systems · FTP · CRM · Legacy Applications
 
 ---
 
 ## 💼 What I Bring
 
-- Ability to design **scalable end-to-end automation solutions**  
-- Experience with **real datasets**, ML models, and analytical workflows  
-- Strong architecture mindset (config-driven, modular, maintainable code)  
-- Experience delivering **RPA developer training programs** (9h · 30h · 40h)  
-- Balanced profile of **technical depth + business understanding**
+- Design of **scalable, enterprise-grade automation solutions**
+- Strong **architecture mindset** (config-driven, modular, maintainable)
+- Experience across **full automation lifecycle**
+- Combination of **automation + data engineering + AI**
+- Training and mentoring experience in RPA automation world class platforms
 
 ---
 
 ## 📬 Contact
 
-- **LinkedIn:** *(https://www.linkedin.com/in/amilcar-rodr%C3%ADguez-250779101/)*  
-- **Email:** *(joserba91@gmail.com)*  
-
----
+- **LinkedIn:** https://www.linkedin.com/in/amilcar-rodr%C3%ADguez-250779101/  
+- **Email:** joserba91@gmail.com
