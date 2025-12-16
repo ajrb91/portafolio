@@ -8,36 +8,51 @@ My work combines **RPA developing and architecture**, **data engineering**, and 
 
 ---
 
-## 📊 Data & Machine Learning Projects
+## 📊 Data Engineering – Professional Experience
 
-Real applied analytics with structured pipelines, EDA, feature engineering, and model evaluation.
+The following data engineering initiatives were **professionally executed** as part of real-world industrial projects.  
+Due to confidentiality and client restrictions, the implementations and source code are **not publicly available in this repository**.
 
-Applied analytics using real datasets from Chile and global sources, including feature engineering, statistical modeling and BI automation.
+### Selected Data Engineering Projects
+
+- O&M technology landscape assessment focused on data storage, processing, and data management  
+- Design and implementation of **CMS data ETL pipelines**  
+- Design of **SCADA data ETL processes**  
+- Design and implementation of **CMS and SCADA data visualization tools** (temperature monitoring)  
+- Migration of O&M data processes to **cloud-based architectures**
+
+These projects focus on:
+- Industrial time-series data processing  
+- ETL pipeline design and orchestration  
+- Analytics-ready data preparation  
+- Cloud data architectures for O&M contexts  
+
+---
+
+## 📈 Data & Machine Learning Projects
+
+Applied analytics and machine learning projects using structured pipelines, feature engineering, and model evaluation.
 
 ### ▸ **CASEN Survey Analysis**  
-Regression models (Lasso, ElasticNet), outlier detection, socio-economic analysis over national survey data.
+Regression models (Lasso, ElasticNet), outlier detection, socio-economic analysis.
 
 ### ▸ **CORFO Approval Modeling** *(Final Diploma Project)*  
-Classification models with 99–100% accuracy. Feature importance, business rules, dataset restructuring, model validation.
+Classification models with 99–100% accuracy, feature importance and business rule validation.
 
 ### ▸ **House Price Prediction**  
-Lasso regression on the Ames dataset. RMSE ≈ 21k (~5.8% error). Performance visualization and feature impact analysis.
+Lasso regression with RMSE ≈ 21k (~5.8% error), performance visualization and feature impact analysis.
 
 ### ▸ **MOP Investment Analysis**  
 Public infrastructure dataset profiling and investment behavior modeling.
 
 ### ▸ **Marketing Leads Automation – Business Intelligence**  
-End-to-end solution combining:
-- Structured data intake (Google Forms)
-- Sentiment analysis (Python + ChatGPT API)
-- Automated business rules (Apps Script)
-- Real-time dashboards (Looker Studio)
+End-to-end solution combining data ingestion, sentiment analysis, automated business rules and dashboards.
 
 ---
 
 ## 🤖 RPA & Automation Projects
 
-This portfolio includes **enterprise and academic RPA projects** developed using **UiPath, Automation Anywhere and Blue Prism**, covering end-to-end automation lifecycles.
+This portfolio includes **real enterprise and academic RPA projects** developed using **UiPath, Automation Anywhere and Blue Prism**, covering end-to-end automation lifecycles.
 
 The **complete and detailed inventory** of RPA projects — including project names, platforms and roles (Developer, Analyst, Architect, Operator, Tutor) — is documented in the following file:
 
