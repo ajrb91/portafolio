@@ -48,6 +48,9 @@ Public infrastructure dataset profiling and investment behavior modeling.
 ### ▸ **Marketing Leads Automation – Business Intelligence**  
 End-to-end solution combining data ingestion, sentiment analysis, automated business rules and dashboards.
 
+### ▸ **AI powered message triage automation – Business Intelligence**  
+Automates the analysis and prioritization of incoming messages using AI to support faster, data-driven business decisions.
+
 ---
 
 ## 🤖 RPA & Automation Projects
@@ -72,13 +75,13 @@ Projects include:
 ## 🧰 Core Skills & Tools
 
 **RPA:**  
-Automation Anywhere A360 · UiPath · Blue Prism · Power Automate
+Automation Anywhere A360 · UiPath · Blue Prism · Power Automate · n8n
 
 **Data & Engineering:**  
 Python · Pandas · NumPy · Scikit-Learn · SQL · ETL · AWS S3 · APIs · Git
 
 **Automation Targets:**  
-SAP · Oracle EBS · Web Applications · Excel · PDFs · Email Systems · FTP · CRM · Legacy Applications
+SAP · Oracle EBS · Web Applications · MS Excel · PDFs · Email Systems · FTP · CRM · ERP · Legacy Applications · Collaboration tools · OpenAI API · API
 
 ---
 
