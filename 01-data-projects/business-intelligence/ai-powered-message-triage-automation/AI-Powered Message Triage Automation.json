@@ -1,0 +1,381 @@
+{
+  "name": "AI-Powered Message Triage Automation",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "88146b53-768f-4c8a-839e-57ee991f7c95",
+              "name": "is_urgent",
+              "value": "=={{ $json.result.sentiment === 'negative'  || ($json.result.tags || []).map(t => t.toLowerCase()).includes('urgent')  || ($json.text || '').toLowerCase().match(/urgente|asap|hoy|inmediato/) }}",
+              "type": "string"
+            },
+            {
+              "id": "dc33e9d3-bd7c-4e32-ab6a-8b5671db133d",
+              "name": "priority",
+              "value": "=={{ $json.is_urgent ? 'HIGH' : 'NORMAL' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -80,
+        -64
+      ],
+      "id": "17179fca-5f4f-4cbc-8c50-a6a3faf20387",
+      "name": "Calcular prioridad"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4a7e876f-694f-4b87-9128-18af0537c288",
+              "name": "result",
+              "value": "={{ JSON.parse($json.output[0].content[0].text) }}",
+              "type": "object"
+            },
+            {
+              "id": "c704c858-2702-4829-ae8b-0650edaabd45",
+              "name": "request_id",
+              "value": "=={{ $json.id || '' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -272,
+        -64
+      ],
+      "id": "153656fc-6303-4215-9dfd-b09f4ebfe368",
+      "name": "Normalizar la salida"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/responses",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "httpBearerAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gpt-4o-mini\",\n  \"input\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Return ONLY valid JSON matching the schema.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Analyze the text and return JSON with: summary (string), sentiment (positive|neutral|negative), tags (string array), recommended_action (string). Text: {{$json.text}}\"\n    }\n  ],\n  \"text\": {\n    \"format\": {\n      \"type\": \"json_schema\",\n      \"name\": \"triage\",\n      \"schema\": {\n        \"type\": \"object\",\n        \"additionalProperties\": false,\n        \"properties\": {\n          \"summary\": { \"type\": \"string\" },\n          \"sentiment\": { \"type\": \"string\", \"enum\": [\"positive\", \"neutral\", \"negative\"] },\n          \"tags\": { \"type\": \"array\", \"items\": { \"type\": \"string\" } },\n          \"recommended_action\": { \"type\": \"string\" }\n        },\n        \"required\": [\"summary\", \"sentiment\", \"tags\", \"recommended_action\"]\n      }\n    }\n  }\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.3,
+      "position": [
+        -464,
+        -64
+      ],
+      "id": "f564812d-faa5-4767-8b47-3310a75745d2",
+      "name": "Llamar a OpenAI",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "k7oU3IGmCf1E7Lo8",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "56566a14-c7ef-4a06-84b4-1f77aa9b4290",
+              "name": "text",
+              "value": "=={{ $json.body.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -672,
+        -64
+      ],
+      "id": "e1a5d5b5-2a0a-4e26-be4b-7b0b4ce6ad4b",
+      "name": "Extraer el texto de entrada"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ai-triage",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -864,
+        -64
+      ],
+      "id": "4390ecd8-a093-472e-97f0-753c44141399",
+      "name": "Trigger",
+      "webhookId": "5c247e09-5a2a-45cd-8d19-e715f3e7343a"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "21b0df6b-3c25-4a40-931b-f6d90666b9c3",
+              "leftValue": "={{ $json.is_urgent.toBoolean() }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        96,
+        -64
+      ],
+      "id": "2d10e561-d6b3-420d-84c0-75406512bcc6",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "select": "channel",
+        "channelId": {
+          "__rl": true,
+          "value": "C0A42F6JCR2",
+          "mode": "list",
+          "cachedResultName": "redes sociales"
+        },
+        "text": "=🚨 AI TRIAGE ({{$node[\"Calcular prioridad\"].json.priority}})\nSentimiento: {{$node[\"Normalizar la salida\"].json.result.sentiment}}\nResumen: {{$node[\"Normalizar la salida\"].json.result.summary}}\nTags: {{ ($node[\"Normalizar la salida\"].json.result.tags || []).join(\", \") }}\nAcción: {{$node[\"Normalizar la salida\"].json.result.recommended_action}}\n",
+        "otherOptions": {}
+      },
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.4,
+      "position": [
+        384,
+        -192
+      ],
+      "id": "a7c71038-2877-4175-814e-b81770812bde",
+      "name": "Send message",
+      "webhookId": "21cb6598-0979-4ecf-b62c-a4035bd81b86",
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "VgCOsNqcADW6YzJG",
+          "name": "Slack account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fadcff37-53e0-4795-8a8a-6d8b1c3044eb",
+              "name": "priority",
+              "value": "=={{ $node[\"Calcular prioridad\"].json.priority }}",
+              "type": "string"
+            },
+            {
+              "id": "08a6f332-7371-46b7-bd5c-fcf5ff16837f",
+              "name": "analysis",
+              "value": "=={{ JSON.stringify($node[\"Normalizar la salida\"].json.result) }}",
+              "type": "string"
+            },
+            {
+              "id": "89310470-6496-4ab8-b517-e4200c39adac",
+              "name": "slack_notified",
+              "value": "=={{ $node[\"Calcular prioridad\"].json.is_urgent}}",
+              "type": "string"
+            },
+            {
+              "id": "26686258-8700-4856-a534-0108a0e93e0d",
+              "name": "request_id",
+              "value": "=={{ $node[\"Normalizar la salida\"].json.request_id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        672,
+        -192
+      ],
+      "id": "474d3093-7665-4c80-b7ee-2e0b3508a407",
+      "name": "Respuesta final"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fadcff37-53e0-4795-8a8a-6d8b1c3044eb",
+              "name": "priority",
+              "value": "={{ $json.priority }}",
+              "type": "string"
+            },
+            {
+              "id": "08a6f332-7371-46b7-bd5c-fcf5ff16837f",
+              "name": "analysis",
+              "value": "={{ $json.result }}",
+              "type": "string"
+            },
+            {
+              "id": "89310470-6496-4ab8-b517-e4200c39adac",
+              "name": "slack_notified",
+              "value": "={{ $json.is_urgent }}",
+              "type": "string"
+            },
+            {
+              "id": "26686258-8700-4856-a534-0108a0e93e0d",
+              "name": "request_id",
+              "value": "={{ $json.request_id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        384,
+        16
+      ],
+      "id": "7b9a2f13-f659-41a9-87fd-6fe6b4c935ca",
+      "name": "Respuesta final1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Normalizar la salida": {
+      "main": [
+        [
+          {
+            "node": "Calcular prioridad",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extraer el texto de entrada": {
+      "main": [
+        [
+          {
+            "node": "Llamar a OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extraer el texto de entrada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Llamar a OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Normalizar la salida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calcular prioridad": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respuesta final1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message": {
+      "main": [
+        [
+          {
+            "node": "Respuesta final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "7005b168-6bee-432b-bfd3-2b029f81c714",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3855ff769a02b6109d43d14d479bcec4ec5682c8862e2b1570f10af95fffe972"
+  },
+  "id": "6AdyQAi8HVa793Li",
+  "tags": []
+}
