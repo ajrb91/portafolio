@@ -42,6 +42,9 @@ Client names and sensitive information have been intentionally omitted for confi
 - Bank Reconciliation Process  
   *Roles:* Analyst, Developer, Operator
 
+- Panama Purchases Demo Process
+  *Roles:* Developer
+
 ---
 
 ## Automation Anywhere Projects
@@ -99,5 +102,6 @@ Client names and sensitive information have been intentionally omitted for confi
 - Legacy Applications
 - PDF
 - IQBot
+
 
 ---
