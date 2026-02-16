@@ -1,0 +1,11 @@
+VPN:
+Para conectarse a la VPN, instala el cliente corporativo y usa tus credenciales.
+
+VACACIONES:
+Las vacaciones deben solicitarse con al menos 10 días de anticipación.
+
+ACCESO A SERVIDORES:
+El acceso se solicita vía ticket. El SLA es de 24 horas hábiles.
+
+INSTALACIÓN DE APLICATIVOS
+Para instalar su aplicativo contactar mesa de ayuda mediante el siguiente correo y el siguiente número.
