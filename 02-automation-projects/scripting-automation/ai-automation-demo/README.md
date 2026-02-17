@@ -14,7 +14,7 @@ This small PoC exposes a REST API to answer frequently asked questions potential
 
 ## Project Structure
 
-movizzon-poc/
+ai-automation-demo/
 app/main.py
 data/docs.txt
 .env
@@ -31,3 +31,4 @@ README.txt
   "question": "How do I configure the VPN?",
   "answer": "..."
 }
+
