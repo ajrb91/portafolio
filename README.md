@@ -74,7 +74,7 @@ Projects include:
 
 ## 🧰 Core Skills & Tools
 
-**RPA:**  
+**RPA, DPA, Workflow Automation and iPaaS**  
 Automation Anywhere A360 · UiPath · Blue Prism · Power Automate · n8n
 
 **Data & Engineering:**  
@@ -82,6 +82,9 @@ Python · Pandas · NumPy · Scikit-Learn · SQL · ETL · AWS S3 · APIs · Git
 
 **Automation Targets:**  
 SAP · Oracle EBS · Web Applications · MS Excel · PDFs · Email Systems · FTP · CRM · ERP · Legacy Applications · Collaboration tools · OpenAI API · API
+
+**Industrial Automation (Academic):**  
+PLC Programming · Siemens S7-1200 · Allen-Bradley ControlLogix · Ladder Logic (LAD) · User RPL · TIA Portal
 
 ---
 
