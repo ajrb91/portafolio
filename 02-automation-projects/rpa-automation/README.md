@@ -87,6 +87,13 @@ Client names and sensitive information have been intentionally omitted for confi
 
 ---
 
+## Power Automate Desktop Projects
+
+- RPA Challenge (Power Automate Desktop – Data-Driven Web Automation)  
+  *Roles:* Developer
+
+---
+
 ## Automated Technologies & Systems
 
 - Oracle E-Business Suite (EBS)
