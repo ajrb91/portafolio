@@ -1,104 +1,80 @@
-# 🚀 Amílcar Rodríguez – Automation & Data Engineer  
-### RPA · Data Engineering · Machine Learning · Process Automation · Solutions Integrator
+# 🚀 Amílcar Rodríguez – Automation & Data Engineer
 
-Welcome to my professional portfolio.  
-Here you will find a curated selection of **automation**, **machine learning**, and **data engineering** projects built with real-world quality standards.
+Automation · Data Engineering · AI/ML · Process Optimization
 
-My work combines **RPA developing and architecture**, **data engineering**, and **clean engineering practices** to deliver scalable, production-ready solutions.
+Welcome to my portfolio.  
+This repository showcases projects, practices, and technical work across **automation**, **data engineering**, **artificial intelligence**, and **process improvement**.
 
----
-
-## 📊 Data Engineering – Professional Experience
-
-The following data engineering initiatives were **professionally executed** as part of real-world industrial projects.  
-Due to confidentiality and client restrictions, the implementations and source code are **not publicly available in this repository**.
-
-### Selected Data Engineering Projects
-
-- O&M technology landscape assessment focused on data storage, processing, and data management  
-- Design and implementation of **CMS data ETL pipelines**  
-- Design of **SCADA data ETL processes**  
-- Design and implementation of **CMS and SCADA data visualization tools** (temperature monitoring)  
-- Migration of O&M data processes to **cloud-based architectures**
-
-These projects focus on:
-- Industrial time-series data processing  
-- ETL pipeline design and orchestration  
-- Analytics-ready data preparation  
-- Cloud data architectures for O&M contexts  
+Rather than maintaining a long project-by-project list here, this main README provides a high-level view of my profile and core areas of work.  
+Detailed implementations, examples, and technology-specific projects are organized in their corresponding folders and documentation.
 
 ---
 
-## 📈 Data & Machine Learning Projects
+## 👨‍💻 Professional Profile
 
-Applied analytics and machine learning projects using structured pipelines, feature engineering, and model evaluation.
+I work at the intersection of **automation**, **data**, and **business process improvement**, building solutions that are practical, scalable, and aligned with real operational needs.
 
-### ▸ **CASEN Survey Analysis**  
-Regression models (Lasso, ElasticNet), outlier detection, socio-economic analysis.
-
-### ▸ **CORFO Approval Modeling** *(Final Diploma Project)*  
-Classification models with 99–100% accuracy, feature importance and business rule validation.
-
-### ▸ **House Price Prediction**  
-Lasso regression with RMSE ≈ 21k (~5.8% error), performance visualization and feature impact analysis.
-
-### ▸ **MOP Investment Analysis**  
-Public infrastructure dataset profiling and investment behavior modeling.
-
-### ▸ **Marketing Leads Automation – Business Intelligence**  
-End-to-end solution combining data ingestion, sentiment analysis, automated business rules and dashboards.
-
-### ▸ **AI powered message triage automation – Business Intelligence**  
-Automates the analysis and prioritization of incoming messages using AI to support faster, data-driven business decisions.
+My experience combines:
+- **RPA and workflow automation**
+- **Data engineering and ETL development**
+- **Applied analytics and machine learning**
+- **Solution design and technical architecture**
 
 ---
 
-## 🤖 RPA & Automation Projects
+## 🔹 Portfolio Areas
 
-This portfolio includes **real enterprise and academic RPA projects** developed using **UiPath, Automation Anywhere and Blue Prism**, covering end-to-end automation lifecycles.
+### Automation & RPA
+Projects and exercises related to robotic process automation, workflow automation, orchestration, and process optimization.
 
-The **complete and detailed inventory** of RPA projects — including project names, platforms and roles (Developer, Analyst, Architect, Operator, Tutor) — is documented in the following file:
+### Data Engineering
+Work related to ETL pipelines, data transformation, industrial data processing, cloud-based data workflows, and analytics-ready datasets.
 
-➡️ **See:** `README.md`  
-*(RPA & Automation Projects Inventory)*
+### AI & Machine Learning
+Projects focused on data analysis, predictive models, classification, feature engineering, and AI-assisted decision support.
 
-Projects include:
-- Enterprise operational automations
-- Banking and financial processes
-- CMS data extraction and loading workflows
-- RPA challenges and best-practice frameworks
-- COE, health check and governance initiatives
-- Training and laboratory practice modules
+### Business & Process Solutions
+Solutions designed to improve operational efficiency, automate repetitive tasks, and support business teams with better digital processes.
 
 ---
 
 ## 🧰 Core Skills & Tools
 
-**RPA, DPA, Workflow Automation and iPaaS**  
-Automation Anywhere A360 · UiPath · Blue Prism · Power Automate · n8n
+**Automation**  
+UiPath · Automation Anywhere · Blue Prism · Power Automate · n8n
 
-**Data & Engineering:**  
-Python · Pandas · NumPy · Scikit-Learn · SQL · ETL · AWS S3 · APIs · Git
+**Data & Engineering**  
+Python · Pandas · NumPy · Scikit-learn · SQL · ETL · APIs · AWS S3 · Git
 
-**Automation Targets:**  
-SAP · Oracle EBS · Web Applications · MS Excel · PDFs · Email Systems · FTP · CRM · ERP · Legacy Applications · Collaboration tools · OpenAI API · API
+**AI & Analytics**  
+Machine Learning · Data Analysis · Business Rules Automation · AI-assisted Process Optimization
 
-**Industrial Automation (Academic):**  
-PLC Programming · Siemens S7-1200 · Allen-Bradley ControlLogix · Ladder Logic (LAD) · User RPL · TIA Portal
+**Industrial / Technical Background**  
+PLC Programming · Siemens S7-1200 · Allen-Bradley ControlLogix · Ladder Logic · User RPL · TIA Portal
 
 ---
 
-## 💼 What I Bring
+## 💼 What This Portfolio Represents
 
-- Design of **scalable, enterprise-grade automation solutions**
-- Strong **architecture mindset** (config-driven, modular, maintainable)
-- Experience across **full automation lifecycle**
-- Combination of **automation + data engineering + AI**
-- Training and mentoring experience in RPA automation world class platforms
+This portfolio reflects my work and learning across multiple domains, including:
+- Enterprise automation
+- Data-driven solutions
+- AI-enhanced workflows
+- Industrial and operational data contexts
+- Practical, maintainable, and scalable solution design
+
+Some professional implementations are represented at a high level due to confidentiality restrictions.
+
+---
+
+## 📂 Repository Structure
+
+Each area of this portfolio may contain its own projects, documentation, or supporting material.  
+For the most accurate and updated view, please explore the folders and README files inside each section.
 
 ---
 
 ## 📬 Contact
 
-- **LinkedIn:** https://www.linkedin.com/in/amilcar-rodr%C3%ADguez-250779101/  
+- **LinkedIn:** [Amílcar Rodríguez](https://www.linkedin.com/in/amilcar-rodr%C3%ADguez-250779101/)
 - **Email:** joserba91@gmail.com
